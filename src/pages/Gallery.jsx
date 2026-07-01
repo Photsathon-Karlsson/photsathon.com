@@ -120,7 +120,7 @@ const Gallery = () => {
 
   const schoolEducation = [
     {
-      title: 'NBI-Handelsakademin, Gothenburg Sweden',
+      title: 'FrontEnd Developer : NBI-Handelsakademin, Gothenburg Sweden',
       images: [
         img('Gallery-NBI-Handelsakademin1.jpg'),
         img('Gallery-NBI-Handelsakademin3.jpg'),
@@ -132,7 +132,7 @@ const Gallery = () => {
       ],
     },
     {
-      title: 'Internship - SBS Thailand',
+      title: 'FrontEnd Developer : Internship - SBS Thailand',
       images: [
         img('Gallery-SBS1.jpg'),
         img('Gallery-SBS2.jpg'),
@@ -146,7 +146,7 @@ const Gallery = () => {
       ],
     },
     {
-      title: 'SFI, Gothenburg Sweden',
+      title: 'Swedish for Immigrants (SFI), Gothenburg Sweden',
       images: [
         img('Gallery-SFI1.jpg'),
         img('Gallery-SFI2.jpg'),
@@ -167,7 +167,7 @@ const Gallery = () => {
       ],
     },
     {
-      title: 'Naresuan University Thailand',
+      title: 'Bachelor of Arts (BA) English Language and Literature : Naresuan University Thailand',
       images: [
         img('Gallery-NaresuanUniversity1.jpg'),
         img('Gallery-NaresuanUniversity3.jpg'),

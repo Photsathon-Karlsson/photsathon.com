@@ -459,6 +459,8 @@ body.dark-mode .home-big-text h1 {
 .home-word {
   display: block;
   white-space: nowrap;
+  line-height: 0.95;
+  margin-bottom: 0.12em;
 }
 
 .home-hover-letter {
@@ -726,6 +728,7 @@ body.dark-mode .color-8 {
 
   .home-big-text h1 {
     font-size: clamp(5.5rem, 8vw, 9rem);
+    line-height: 1;
   }
 
   .home-name {
@@ -1569,8 +1572,8 @@ body.dark-mode .color-8 {
 }
 
 .service-icon-img {
-  width: 100px;
-  height: 100px;
+  width: 170px;
+  height: 160px;
   object-fit: contain;
   display: block;
   animation: floatIcon 5s ease-in-out infinite;
@@ -1581,8 +1584,8 @@ body.dark-mode .color-8 {
 }
 
 .skill-mini-icon-img {
-  width: 90px;
-  height: 90px;
+  width: 160px;
+  height: 160px;
   object-fit: contain;
   display: block;
   margin: 0 auto;

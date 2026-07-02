@@ -1,6 +1,13 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import '../index.css';
-import { FaInstagram, FaLinkedin, FaGithub, FaEnvelope, FaPaperPlane } from 'react-icons/fa';
+import {
+  FaInstagram,
+  FaLinkedin,
+  FaGithub,
+  FaEnvelope,
+  FaPaperPlane,
+} from 'react-icons/fa';
 
 const colors = ['#FF2DD1', '#FDFFB8', '#4DFFBE', '#63C8FF'];
 
@@ -15,12 +22,16 @@ const HoverText = ({ text, className = '' }) => {
             <span
               key={`${char}-${charIndex}`}
               className="hover-letter"
-              style={{ '--hover-color': colors[(wordIndex + charIndex) % colors.length] }}
+              style={{
+                '--hover-color': colors[(wordIndex + charIndex) % colors.length],
+              }}
             >
               {char}
             </span>
           ))}
-          {wordIndex < words.length - 1 && <span className="hover-space">&nbsp;</span>}
+          {wordIndex < words.length - 1 && (
+            <span className="hover-space">&nbsp;</span>
+          )}
         </span>
       ))}
     </span>
@@ -28,6 +39,7 @@ const HoverText = ({ text, className = '' }) => {
 };
 
 const Contact = () => {
+  const { t } = useTranslation();
   const formSubmitKey = '23d7ddc1426bf94f637de05c0bc90412';
 
   const [formData, setFormData] = useState({
@@ -50,31 +62,34 @@ const Contact = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    setStatus('Sending...');
+    setStatus(t('contactPage.sendingStatus'));
 
     const formBody = {
       name: formData.name,
       email: formData.emailAddress,
       subject: formData.subject,
       message: formData.message,
-      _subject: formData.subject || 'New message from photsathon.com',
+      _subject: formData.subject || t('contactPage.defaultSubject'),
     };
 
     try {
-      const response = await fetch(`https://formsubmit.co/ajax/${formSubmitKey}`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Accept: 'application/json',
-        },
-        body: JSON.stringify(formBody),
-      });
+      const response = await fetch(
+        `https://formsubmit.co/ajax/${formSubmitKey}`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+          body: JSON.stringify(formBody),
+        }
+      );
 
       if (!response.ok) {
         throw new Error('Something went wrong');
       }
 
-      setStatus('Message sent! ♡');
+      setStatus(t('contactPage.successStatus'));
       setFormData({
         name: '',
         emailAddress: '',
@@ -82,7 +97,7 @@ const Contact = () => {
         message: '',
       });
     } catch (error) {
-      setStatus('Sorry, please try again or contact me on Instagram.');
+      setStatus(t('contactPage.errorStatus'));
     }
   };
 
@@ -92,17 +107,17 @@ const Contact = () => {
         <div className="contact-hero">
           <div className="contact-hero-text">
             <h1 className="contact-title">
-              <HoverText text="Let's Build" />
+              <HoverText text={t('contactPage.titleLine1')} />
               <br />
-              <HoverText text="Something Together" />
+              <HoverText text={t('contactPage.titleLine2')} />
             </h1>
 
             <p className="contact-subtitle">
-              From ideas to websites,
+              {t('contactPage.subtitleLine1')}
               <br />
-              let&apos;s create something simple,
+              {t('contactPage.subtitleLine2')}
               <br />
-              beautiful, and meaningful. ♡
+              {t('contactPage.subtitleLine3')}
             </p>
           </div>
 
@@ -110,7 +125,7 @@ const Contact = () => {
             <img
               className="contact-hero-image"
               src={`${import.meta.env.BASE_URL}img/contact-me.png`}
-              alt="Photsathon waving while working on a laptop"
+              alt={t('contactPage.imageAlt')}
             />
           </div>
         </div>
@@ -122,61 +137,61 @@ const Contact = () => {
 
               <div>
                 <h2>
-                  <HoverText text="Let's Talk" />
+                  <HoverText text={t('contactPage.talkTitle')} />
                 </h2>
 
                 <p>
-                  Whether it&apos;s a website,
+                  {t('contactPage.talkLine1')}
                   <br />
-                  a collaboration,
+                  {t('contactPage.talkLine2')}
                   <br />
-                  or a question,
+                  {t('contactPage.talkLine3')}
                   <br />
-                  I&apos;m happy to help.
+                  {t('contactPage.talkLine4')}
                 </p>
               </div>
             </div>
 
             <form className="contact-form" onSubmit={handleSubmit}>
-              <label htmlFor="name">Your Name</label>
+              <label htmlFor="name">{t('contactPage.nameLabel')}</label>
               <input
                 id="name"
                 name="name"
                 type="text"
-                placeholder="What should I call you?"
+                placeholder={t('contactPage.namePlaceholder')}
                 value={formData.name}
                 onChange={handleChange}
                 required
               />
 
-              <label htmlFor="emailAddress">Email Address</label>
+              <label htmlFor="emailAddress">{t('contactPage.emailLabel')}</label>
               <input
                 id="emailAddress"
                 name="emailAddress"
                 type="email"
-                placeholder="your@email.com"
+                placeholder={t('contactPage.emailPlaceholder')}
                 value={formData.emailAddress}
                 onChange={handleChange}
                 required
               />
 
-              <label htmlFor="subject">Subject</label>
+              <label htmlFor="subject">{t('contactPage.subjectLabel')}</label>
               <input
                 id="subject"
                 name="subject"
                 type="text"
-                placeholder="What's this about?"
+                placeholder={t('contactPage.subjectPlaceholder')}
                 value={formData.subject}
                 onChange={handleChange}
                 required
               />
 
-              <label htmlFor="message">Your Message</label>
+              <label htmlFor="message">{t('contactPage.messageLabel')}</label>
               <textarea
                 id="message"
                 name="message"
                 rows="6"
-                placeholder="Tell me a little about your project, idea, or anything you'd like to share..."
+                placeholder={t('contactPage.messagePlaceholder')}
                 value={formData.message}
                 onChange={handleChange}
                 required
@@ -184,10 +199,10 @@ const Contact = () => {
 
               <div className="contact-form-actions">
                 <button className="contact-send-button" type="submit">
-                  Send Message <FaPaperPlane />
+                  {t('contactPage.sendButton')} <FaPaperPlane />
                 </button>
 
-                <span>{status || "I'll reply soon! ♡"}</span>
+                <span>{status || t('contactPage.defaultStatus')}</span>
               </div>
             </form>
           </article>
@@ -195,7 +210,7 @@ const Contact = () => {
           <div className="contact-side">
             <article className="contact-card contact-online-card">
               <h2>
-                <HoverText text="Find Me Online" />
+                <HoverText text={t('contactPage.onlineTitle')} />
               </h2>
 
               <div className="contact-links">
@@ -210,7 +225,7 @@ const Contact = () => {
                   </span>
 
                   <span>
-                    <strong>GitHub</strong>
+                    <strong>{t('contactPage.github')}</strong>
                     <small>Photsathon-Karlsson</small>
                   </span>
                 </a>
@@ -226,7 +241,7 @@ const Contact = () => {
                   </span>
 
                   <span>
-                    <strong>LinkedIn</strong>
+                    <strong>{t('contactPage.linkedin')}</strong>
                     <small>Photsathon Karlsson</small>
                   </span>
                 </a>
@@ -242,7 +257,7 @@ const Contact = () => {
                   </span>
 
                   <span>
-                    <strong>Instagram</strong>
+                    <strong>{t('contactPage.instagram')}</strong>
                     <small>@photsathon_koi</small>
                   </span>
                 </a>
@@ -251,17 +266,17 @@ const Contact = () => {
 
             <article className="contact-card contact-connect-card">
               <h2 className="contact-connect-title">
-                <HoverText text="Let's Make Something Awesome" />
+                <HoverText text={t('contactPage.connectTitle')} />
               </h2>
 
               <p>
-                I&apos;m always open to
+                {t('contactPage.connectLine1')}
                 <br />
-                new opportunities,
+                {t('contactPage.connectLine2')}
                 <br />
-                creative collaborations,
+                {t('contactPage.connectLine3')}
                 <br />
-                and friendly conversations.
+                {t('contactPage.connectLine4')}
               </p>
 
               <div className="contact-paper-plane">✈</div>
@@ -270,8 +285,8 @@ const Contact = () => {
         </div>
 
         <div className="contact-bottom">
-          <p>Thanks for stopping by! ♡</p>
-          <span>See you soon! 👋</span>
+          <p>{t('contactPage.bottomText')}</p>
+          <span>{t('contactPage.bottomBye')}</span>
         </div>
       </div>
     </section>

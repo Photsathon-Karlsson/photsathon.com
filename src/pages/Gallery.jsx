@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import '../index.css';
 
 const img = (fileName) => `${import.meta.env.BASE_URL}img/${fileName}`;
@@ -13,7 +14,7 @@ const colors = [
   '#CF0A0A',
 ];
 
-const GalleryCarousel = ({ gallery }) => {
+const GalleryCarousel = ({ gallery, t }) => {
   const [index, setIndex] = useState(0);
 
   const prevImage = () => {
@@ -31,7 +32,7 @@ const GalleryCarousel = ({ gallery }) => {
           className="gallery-arrow gallery-arrow-left"
           type="button"
           onClick={prevImage}
-          aria-label={`Previous image in ${gallery.title}`}
+          aria-label={`${t('galleryPage.ariaPrevious')} ${gallery.title}`}
         >
           ‹
         </button>
@@ -46,7 +47,7 @@ const GalleryCarousel = ({ gallery }) => {
           className="gallery-arrow gallery-arrow-right"
           type="button"
           onClick={nextImage}
-          aria-label={`Next image in ${gallery.title}`}
+          aria-label={`${t('galleryPage.ariaNext')} ${gallery.title}`}
         >
           ›
         </button>
@@ -63,6 +64,8 @@ const GalleryCarousel = ({ gallery }) => {
 };
 
 const Gallery = () => {
+  const { t } = useTranslation();
+
   const hoverText = (text) =>
     text.split('').map((letter, index) => (
       <span
@@ -76,7 +79,7 @@ const Gallery = () => {
 
   const workMoments = [
     {
-      title: 'Head Start International School, Phuket Thailand',
+      title: t('galleryPage.work.headstart'),
       images: [
         img('Gallery-Headstart1.jpg'),
         img('Gallery-Headstart2.jpg'),
@@ -86,7 +89,7 @@ const Gallery = () => {
       ],
     },
     {
-      title: 'The Genius Language School, Phuket Thailand',
+      title: t('galleryPage.work.genius'),
       images: [
         img('Gallery-TheGeniusLanguageSchool2.jpg'),
         img('Gallery-TheGeniusLanguageSchool3.jpg'),
@@ -99,7 +102,7 @@ const Gallery = () => {
       ],
     },
     {
-      title: 'Anuban Khonkaen, Khonkaen Thailand',
+      title: t('galleryPage.work.anuban'),
       images: [
         img('Gallery-AnubanKhonkaen1.png'),
         img('Gallery-AnubanKhonkaen2.jpg'),
@@ -109,7 +112,7 @@ const Gallery = () => {
       ],
     },
     {
-      title: 'Phuket Dog Resort, Phuket Thailand',
+      title: t('galleryPage.work.dogresort'),
       images: [
         img('Gallery-PhuketDogResort1.jpg'),
         img('Gallery-PhuketDogResort2.jpg'),
@@ -120,7 +123,7 @@ const Gallery = () => {
 
   const schoolEducation = [
     {
-      title: 'FrontEnd Developer : NBI-Handelsakademin, Gothenburg Sweden',
+      title: t('galleryPage.school.nbi'),
       images: [
         img('Gallery-NBI-Handelsakademin1.jpg'),
         img('Gallery-NBI-Handelsakademin3.jpg'),
@@ -132,7 +135,7 @@ const Gallery = () => {
       ],
     },
     {
-      title: 'FrontEnd Developer : Internship - SBS Thailand',
+      title: t('galleryPage.school.sbs'),
       images: [
         img('Gallery-SBS1.jpg'),
         img('Gallery-SBS2.jpg'),
@@ -146,7 +149,7 @@ const Gallery = () => {
       ],
     },
     {
-      title: 'Swedish for Immigrants (SFI), Gothenburg Sweden',
+      title: t('galleryPage.school.sfi'),
       images: [
         img('Gallery-SFI1.jpg'),
         img('Gallery-SFI2.jpg'),
@@ -155,7 +158,7 @@ const Gallery = () => {
       ],
     },
     {
-      title: 'SFI-TalangBarnomsorg, Gothenburg Sweden',
+      title: t('galleryPage.school.talang'),
       images: [
         img('Gallery-SFI-TalangBarnomsorg1.jpg'),
         img('Gallery-SFI-TalangBarnomsorg2.jpg'),
@@ -167,8 +170,7 @@ const Gallery = () => {
       ],
     },
     {
-      title:
-        'Bachelor of Arts (BA) English Language and Literature : Naresuan University Thailand',
+      title: t('galleryPage.school.naresuan'),
       images: [
         img('Gallery-NaresuanUniversity1.jpg'),
         img('Gallery-NaresuanUniversity3.jpg'),
@@ -181,7 +183,7 @@ const Gallery = () => {
       ],
     },
     {
-      title: 'Språkcafe, Götaplatsen, Gothenburg Sweden',
+      title: t('galleryPage.school.sprakcafe'),
       images: [
         img('Gallery-Språkcafe1.jpg'),
         img('Gallery-Språkcafe2.jpg'),
@@ -195,7 +197,7 @@ const Gallery = () => {
 
   const hobbies = [
     {
-      title: 'Drawing',
+      title: t('galleryPage.hobby.drawing'),
       images: [
         img('Gallery-Drawing1.png'),
         img('Gallery-Drawing2.png'),
@@ -204,7 +206,7 @@ const Gallery = () => {
       ],
     },
     {
-      title: 'Crafts',
+      title: t('galleryPage.hobby.crafts'),
       images: [
         img('Gallery-Craft1.png'),
         img('Gallery-Craft2.jpg'),
@@ -213,7 +215,7 @@ const Gallery = () => {
       ],
     },
     {
-      title: 'Crochet',
+      title: t('galleryPage.hobby.crochet'),
       images: [
         img('Gallery-Crochet1.png'),
         img('Gallery-Crochet2.png'),
@@ -226,31 +228,31 @@ const Gallery = () => {
 
   const places = [
     {
-      title: 'Thailand',
+      title: t('galleryPage.places.thailand'),
       images: Array.from({ length: 13 }, (_, i) =>
         img(`Gallery-Thailand${i + 1}.jpg`)
       ),
     },
     {
-      title: 'Sweden',
+      title: t('galleryPage.places.sweden'),
       images: Array.from({ length: 13 }, (_, i) =>
         img(`Gallery-Sweden${i + 1}.jpg`)
       ),
     },
     {
-      title: 'Denmark',
+      title: t('galleryPage.places.denmark'),
       images: Array.from({ length: 4 }, (_, i) =>
         img(`Gallery-Denmark${i + 1}.jpg`)
       ),
     },
     {
-      title: 'Poland',
+      title: t('galleryPage.places.poland'),
       images: Array.from({ length: 12 }, (_, i) =>
         img(`Gallery-Poland${i + 1}.jpg`)
       ),
     },
     {
-      title: 'Vietnam',
+      title: t('galleryPage.places.vietnam'),
       images: Array.from({ length: 6 }, (_, i) =>
         img(`Gallery-Vietnam${i + 1}.jpg`)
       ),
@@ -260,38 +262,38 @@ const Gallery = () => {
   const milestones = [
     {
       icon: '🇹🇭',
-      title: 'Thailand',
-      description: 'My roots, early education, and first work experiences.',
+      title: t('galleryPage.milestones.thailand.title'),
+      description: t('galleryPage.milestones.thailand.description'),
     },
     {
       icon: '🎓',
-      title: 'English Degree',
-      description: 'Studied English Language and Literature.',
+      title: t('galleryPage.milestones.degree.title'),
+      description: t('galleryPage.milestones.degree.description'),
     },
     {
       icon: '👩‍🏫',
-      title: 'Teaching',
-      description: 'Worked as a teacher and teacher assistant.',
+      title: t('galleryPage.milestones.teaching.title'),
+      description: t('galleryPage.milestones.teaching.description'),
     },
     {
       icon: '🇸🇪',
-      title: 'Sweden',
-      description: 'Started a new chapter with study, work, and daily life.',
+      title: t('galleryPage.milestones.sweden.title'),
+      description: t('galleryPage.milestones.sweden.description'),
     },
     {
       icon: '👶',
-      title: 'Preschool Work',
-      description: 'Worked with children, routines, communication, and teamwork.',
+      title: t('galleryPage.milestones.preschool.title'),
+      description: t('galleryPage.milestones.preschool.description'),
     },
     {
       icon: '💻',
-      title: 'Frontend Development',
-      description: 'Studied web development and built digital projects.',
+      title: t('galleryPage.milestones.frontend.title'),
+      description: t('galleryPage.milestones.frontend.description'),
     },
     {
       icon: '🚀',
-      title: 'Web Portfolio',
-      description: 'Creating my own space to show projects, skills, and journey.',
+      title: t('galleryPage.milestones.portfolio.title'),
+      description: t('galleryPage.milestones.portfolio.description'),
     },
   ];
 
@@ -299,58 +301,57 @@ const Gallery = () => {
     <main className="life-page" id="lifestyle">
       <section className="life-hero">
         <div className="life-hero-text">
-          <h1 aria-label="Gallery">{hoverText('Gallery')}</h1>
+          <h1 aria-label={t('galleryPage.title')}>
+            {hoverText(t('galleryPage.title'))}
+          </h1>
 
-          <p>
-            A collection of my work, studies, creativity, hobbies, and places
-            that shaped me. <span className="heart">♡</span>
-          </p>
+          <p>{t('galleryPage.subtitle')}</p>
         </div>
       </section>
 
       <section className="life-section">
-        <h2>{hoverText('Moments & Memories')}</h2>
+        <h2>{hoverText(t('galleryPage.momentsTitle'))}</h2>
 
         <div className="gallery-subsection">
-          <h3>{hoverText('Work Moments')}</h3>
+          <h3>{hoverText(t('galleryPage.workMoments'))}</h3>
           <div className="gallery-carousel-grid">
             {workMoments.map((gallery) => (
-              <GalleryCarousel gallery={gallery} key={gallery.title} />
+              <GalleryCarousel gallery={gallery} key={gallery.title} t={t} />
             ))}
           </div>
         </div>
 
         <div className="gallery-subsection">
-          <h3>{hoverText('School & Education')}</h3>
+          <h3>{hoverText(t('galleryPage.schoolEducation'))}</h3>
           <div className="gallery-carousel-grid">
             {schoolEducation.map((gallery) => (
-              <GalleryCarousel gallery={gallery} key={gallery.title} />
+              <GalleryCarousel gallery={gallery} key={gallery.title} t={t} />
             ))}
           </div>
         </div>
 
         <div className="gallery-subsection">
-          <h3>{hoverText('Hobbies')}</h3>
+          <h3>{hoverText(t('galleryPage.hobbies'))}</h3>
           <div className="gallery-carousel-grid">
             {hobbies.map((gallery) => (
-              <GalleryCarousel gallery={gallery} key={gallery.title} />
+              <GalleryCarousel gallery={gallery} key={gallery.title} t={t} />
             ))}
           </div>
         </div>
       </section>
 
       <section className="life-section">
-        <h2>{hoverText('Places I’ve Been')}</h2>
+        <h2>{hoverText(t('galleryPage.placesTitle'))}</h2>
 
         <div className="gallery-carousel-grid">
           {places.map((gallery) => (
-            <GalleryCarousel gallery={gallery} key={gallery.title} />
+            <GalleryCarousel gallery={gallery} key={gallery.title} t={t} />
           ))}
         </div>
       </section>
 
       <section className="life-section">
-        <h2>{hoverText('Milestones')}</h2>
+        <h2>{hoverText(t('galleryPage.milestonesTitle'))}</h2>
 
         <div className="life-timeline">
           {milestones.map((item) => (
@@ -365,9 +366,9 @@ const Gallery = () => {
       </section>
 
       <section className="life-cta">
-        <h2>♡ Like what you see?</h2>
-        <p>Let’s turn memories, ideas, and stories into something meaningful.</p>
-        <a href="#contact">Say Hello 👋</a>
+        <h2>{t('galleryPage.ctaTitle')}</h2>
+        <p>{t('galleryPage.ctaText')}</p>
+        <a href="#contact">{t('galleryPage.ctaButton')}</a>
       </section>
     </main>
   );

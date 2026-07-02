@@ -25,7 +25,6 @@ const Header = () => {
     }
 
     const element = document.getElementById(id);
-
     if (!element) return;
 
     const header = document.querySelector('.header');
@@ -35,7 +34,7 @@ const Header = () => {
       element.getBoundingClientRect().top +
       window.pageYOffset -
       headerHeight -
-      12; 
+      12;
 
     window.scrollTo({
       top: y,
@@ -61,23 +60,23 @@ const Header = () => {
 
         <nav className="nav" aria-label="Main navigation">
           <button type="button" onClick={() => scrollToSection('home')}>
-            {t('home')}
+            {t('nav.home')}
           </button>
 
           <button type="button" onClick={() => scrollToSection('projects')}>
-            {t('projects')}
+            {t('nav.projects')}
           </button>
 
           <button type="button" onClick={() => scrollToSection('whatido')}>
-            {t('whatido')}
+            {t('nav.whatido')}
           </button>
 
           <button type="button" onClick={() => scrollToSection('lifestyle')}>
-            Gallery
+            {t('nav.gallery')}
           </button>
 
           <button type="button" onClick={() => scrollToSection('contact')}>
-            {t('contact')}
+            {t('nav.contact')}
           </button>
         </nav>
 

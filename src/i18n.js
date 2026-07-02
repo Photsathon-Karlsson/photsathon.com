@@ -6,12 +6,14 @@ i18n
   .use(HttpBackend)
   .use(initReactI18next)
   .init({
+    lng: 'en',
     fallbackLng: 'en',
     debug: true,
-    interpolation: { escapeValue: false },
+    interpolation: {
+      escapeValue: false,
+    },
     backend: {
-      // loadPath: '/locales/{{lng}}.json',
-      loadPath: `${import.meta.env.BASE_URL}locales/{{lng}}.json`,
+      loadPath: '/locales/{{lng}}.json',
     },
   });
 

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import '../index.css';
 
 const colors = [
@@ -12,11 +13,13 @@ const colors = [
 ];
 
 const Home = () => {
+  const { t } = useTranslation();
+
   const [trailDots, setTrailDots] = useState([]);
   const [showAbout, setShowAbout] = useState(false);
 
-  const heroWords = ['From', 'Idea', 'To', 'Website'];
-  const fullName = 'Photsathon Karlsson';
+  const heroWords = t('home.heroWords', { returnObjects: true });
+  const fullName = t('home.name');
 
   const openCV = () => {
     const cvWindow = window.open('', '_blank');
@@ -218,7 +221,7 @@ const Home = () => {
 
       <section className="home-hero" aria-labelledby="home-title">
         <div className="home-big-text">
-          <h1 id="home-title" aria-label="From Idea To Website">
+          <h1 id="home-title" aria-label={heroWords.join(' ')}>
             {heroWords.map((word) => (
               <span className="home-word" key={word}>
                 {word.split('').map((letter, index) => (
@@ -240,7 +243,7 @@ const Home = () => {
             <img
               className="home-floating-logo logo-main"
               src={`${import.meta.env.BASE_URL}img/logo - home.png`}
-              alt="Photsathon logo"
+              alt={t('home.logoAlt')}
             />
 
             <img
@@ -251,7 +254,7 @@ const Home = () => {
             />
           </div>
 
-          <p className="home-kicker">Hi, I'm</p>
+          <p className="home-kicker">{t('home.intro')}</p>
 
           <h2 className="home-name" aria-label={fullName}>
             {fullName.split('').map((letter, index) => (
@@ -268,19 +271,17 @@ const Home = () => {
             ))}
           </h2>
 
-          <p className="home-subtitle">
-            ⭐ Frontend Developer ⭐
-          </p>
+          <p className="home-subtitle">{t('home.role')}</p>
 
           <p className="home-description">
-            Building websites with code.
+            {t('home.descriptionLine1')}
             <br />
-            Creating experiences with care.
+            {t('home.descriptionLine2')}
           </p>
 
           <div className="home-actions">
             <button type="button" className="home-button" onClick={openCV}>
-              View CV
+              {t('home.viewCV')}
             </button>
 
             <button
@@ -288,18 +289,14 @@ const Home = () => {
               className="home-button"
               onClick={() => setShowAbout(!showAbout)}
             >
-              About Me
+              {t('home.aboutMe')}
             </button>
           </div>
 
           {showAbout && (
             <div className="home-about-box">
-              <p>From Thailand to Sweden. From preschool to programming.</p>
-              <p>
-                My journey taught me that great experiences—whether for children
-                or users—begin with understanding people. Now, I turn ideas into
-                clean, modern websites.
-              </p>
+              <p>{t('home.aboutLine1')}</p>
+              <p>{t('home.aboutLine2')}</p>
             </div>
           )}
         </aside>

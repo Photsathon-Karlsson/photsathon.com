@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import '../index.css';
 
 const colors = [
@@ -14,6 +15,8 @@ const colors = [
 const img = (fileName) => `${import.meta.env.BASE_URL}img/${fileName}`;
 
 const WhatIDo = () => {
+  const { t } = useTranslation();
+
   const hoverText = (text) =>
     text.split('').map((letter, index) => (
       <span
@@ -28,120 +31,89 @@ const WhatIDo = () => {
   const services = [
     {
       icon: img('logo - what i do - Frontend Development.png'),
-      title: 'Frontend Development',
-      description:
-        'I build responsive websites with clean code and user-friendly structure.',
-      items: ['React', 'HTML, CSS, JavaScript', 'TypeScript'],
+      title: t('whatidoPage.services.frontend.title'),
+      description: t('whatidoPage.services.frontend.description'),
+      items: t('whatidoPage.services.frontend.items', { returnObjects: true }),
     },
     {
       icon: img('logo - what i do - Web Design.png'),
-      title: 'Web Design',
-      description:
-        'I design simple, modern websites that are clear, useful, and easy to use.',
-      items: ['Responsive Design', 'Website Structure', 'Visual Design'],
+      title: t('whatidoPage.services.webdesign.title'),
+      description: t('whatidoPage.services.webdesign.description'),
+      items: t('whatidoPage.services.webdesign.items', { returnObjects: true }),
     },
     {
       icon: img('logo - what i do - UIUX Design.png'),
-      title: 'UI/UX Design',
-      description:
-        'I create digital experiences that focus on people, accessibility, and good flow.',
-      items: ['Figma', 'WCAG', 'User-friendly Design'],
+      title: t('whatidoPage.services.uiux.title'),
+      description: t('whatidoPage.services.uiux.description'),
+      items: t('whatidoPage.services.uiux.items', { returnObjects: true }),
     },
     {
       icon: img('logo - what i do - IT Support.png'),
-      title: 'IT Support',
-      description:
-        'I can help with digital tools, basic troubleshooting, and technical support.',
-      items: ['Helpdesk', 'Troubleshooting', 'Digital Tools'],
+      title: t('whatidoPage.services.itsupport.title'),
+      description: t('whatidoPage.services.itsupport.description'),
+      items: t('whatidoPage.services.itsupport.items', { returnObjects: true }),
     },
     {
       icon: img('logo - what i do - Preschool Assistant.png'),
-      title: 'Preschool Assistant',
-      description:
-        'I have experience supporting children, teachers, learning, and daily routines.',
-      items: ['Learning Support', 'Communication', 'Teamwork'],
+      title: t('whatidoPage.services.preschool.title'),
+      description: t('whatidoPage.services.preschool.description'),
+      items: t('whatidoPage.services.preschool.items', { returnObjects: true }),
     },
     {
       icon: img('logo - what i do - Admin.png'),
-      title: 'Administrator',
-      description:
-        'I have experience with documentation, organization, and customer communication.',
-      items: ['Documentation', 'Organization', 'Customer Service'],
+      title: t('whatidoPage.services.admin.title'),
+      description: t('whatidoPage.services.admin.description'),
+      items: t('whatidoPage.services.admin.items', { returnObjects: true }),
     },
   ];
 
   const skills = [
-  {
-    icon: img('logo - what i do - Frontend Development 2.png'),
-    title: 'Frontend Development',
-    text: 'React, HTML, CSS, JavaScript, TypeScript',
-  },
-  {
-    icon: img('logo - what i do - IT Support 2.png'),
-    title: 'IT Support',
-    text: 'Helpdesk, Troubleshooting, Digital Tools',
-  },
-  {
-    icon: img('logo - what i do - UIUX Design 2.png'),
-    title: 'UX/UI Design',
-    text: 'Figma, Responsive Design, WCAG',
-  },
-  {
-    icon: img('logo - what i do - Customer Service.png'),
-    title: 'Customer Service',
-    text: 'Communication, Problem Solving',
-  },
-  {
-    icon: img('logo - what i do - Admin 2.png'),
-    title: 'Administration',
-    text: 'Documentation, Organization',
-  },
-  {
-    icon: img('logo - what i do - Education.png'),
-    title: 'Education',
-    text: 'Teaching, Learning Support',
-  },
-];
-
-  const education = [
-    '2024 – 2026 | Frontend Development — NBI Handelsakademin, Gothenburg, Sweden',
-    '2024 | Programming 1 HTML/CSS — Handelsakademin, Sweden',
-    '2024 | Programming 1 C# — Hermods, Sweden',
-    '2024 | Swedish as a Second Language 2 — Hermods, Sweden',
-    '2022 | Preschool / Nursery Assistant Education — Komvux Alafors, Sweden',
-    '2006 | B.A. English Language and Literature — Naresuan University, Thailand',
-    '2000 | Business Administration and Computer Applications — Northeastern Technological College, Thailand',
+    {
+      icon: img('logo - what i do - Frontend Development 2.png'),
+      title: t('whatidoPage.skills.frontend.title'),
+      text: t('whatidoPage.skills.frontend.text'),
+    },
+    {
+      icon: img('logo - what i do - IT Support 2.png'),
+      title: t('whatidoPage.skills.itsupport.title'),
+      text: t('whatidoPage.skills.itsupport.text'),
+    },
+    {
+      icon: img('logo - what i do - UIUX Design 2.png'),
+      title: t('whatidoPage.skills.uiux.title'),
+      text: t('whatidoPage.skills.uiux.text'),
+    },
+    {
+      icon: img('logo - what i do - Customer Service.png'),
+      title: t('whatidoPage.skills.customer.title'),
+      text: t('whatidoPage.skills.customer.text'),
+    },
+    {
+      icon: img('logo - what i do - Admin 2.png'),
+      title: t('whatidoPage.skills.admin.title'),
+      text: t('whatidoPage.skills.admin.text'),
+    },
+    {
+      icon: img('logo - what i do - Education.png'),
+      title: t('whatidoPage.skills.education.title'),
+      text: t('whatidoPage.skills.education.text'),
+    },
   ];
 
-  const work = [
-    '2025 – 2026 | Frontend Development Intern — Satit Bilingual School of Rangsit University, Thailand',
-    '2025 | Service Worker / Cleaner — Kungälvs Sjukhus, Sweden',
-    '2021 – 2023 | Preschool Assistant — Ale Kommun, Sweden',
-    '2019 – 2021 | Preschool Assistant — Göteborg Stad, Sweden',
-    '2019 – 2020 | Housekeeper — Radisson Blu Scandinavia Hotel, Sweden',
-    '2019 | Preschool Assistant Internship — Skånegatans Förskola, Sweden',
-    '2015 | Administrator — HeadStart International School, Phuket, Thailand',
-    '2013 – 2015 | Thai Language Teacher — The Genius Language School, Phuket, Thailand',
-    '2011 – 2012 | Teacher Assistant — Anuban Khonkaen School, Thailand',
-    '2010 – 2011 | English Teacher — Paiboon Wittaya School, Thailand',
-    '2010 | English Teacher — Smart English for Kids, Thailand',
-  ];
+  const education = t('whatidoPage.educationList', { returnObjects: true });
+  const work = t('whatidoPage.workList', { returnObjects: true });
 
   return (
     <main className="what-page" id="whatido">
       <section className="what-hero">
         <div className="what-hero-text">
-          <h1>{hoverText('What I Do')}</h1>
-          <p>
-            I combine technology, creativity, and communication to create useful
-            digital experiences and solve everyday problems.{' '}
-            <span className="heart">♡</span>
-          </p>
+          <h1>{hoverText(t('whatidoPage.title'))}</h1>
+          <p>{t('whatidoPage.subtitle')}</p>
         </div>
       </section>
 
       <section className="what-section">
-        <h2>{hoverText('How I Can Help')}</h2>
+        <h2>{hoverText(t('whatidoPage.helpTitle'))}</h2>
 
         <div className="service-grid">
           {services.map((service) => (
@@ -168,7 +140,7 @@ const WhatIDo = () => {
       </section>
 
       <section className="what-section">
-        <h2>{hoverText('Skills')}</h2>
+        <h2>{hoverText(t('whatidoPage.skillsTitle'))}</h2>
 
         <div className="skills-strip">
           {skills.map((skill) => (
@@ -189,7 +161,7 @@ const WhatIDo = () => {
 
       <section className="what-two-columns">
         <div className="what-section">
-          <h2>{hoverText('Education')}</h2>
+          <h2>{hoverText(t('whatidoPage.educationTitle'))}</h2>
 
           <div className="info-list">
             {education.map((item) => (
@@ -201,7 +173,7 @@ const WhatIDo = () => {
         </div>
 
         <div className="what-section">
-          <h2>{hoverText('Work Experience')}</h2>
+          <h2>{hoverText(t('whatidoPage.workTitle'))}</h2>
 
           <div className="info-list">
             {work.map((item) => (
@@ -214,9 +186,9 @@ const WhatIDo = () => {
       </section>
 
       <section className="what-cta">
-        <h2>♡ Let&apos;s create together</h2>
-        <p>Every great idea starts with a simple conversation.</p>
-        <a href="#contact">Say Hello 👋</a>
+        <h2>{t('whatidoPage.ctaTitle')}</h2>
+        <p>{t('whatidoPage.ctaText')}</p>
+        <a href="#contact">{t('whatidoPage.ctaButton')}</a>
       </section>
     </main>
   );

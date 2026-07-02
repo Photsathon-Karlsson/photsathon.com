@@ -1,57 +1,292 @@
 {
-  "home": "Hem",
-  "projects": "Projekt",
-  "whatido": "Vad jag gör",
-  "education": "Utbildning",
-  "work": "Arbetslivserfarenhet",
-  "skills": "Kompetenser",
-  "lifestyle": "Liv",
-  "contact": "Kontakt",
-  "homeTitle": "Hej, jag heter Photsathon",
-  "homeSubtitle": "Frontendutvecklare & kreativ skapare",
-  "aboutContent": "Jag flyttade från Thailand till Sverige 2018. Efter att ha studerat svenska och arbetat som förskoleassistent upptäckte jag mitt intresse för frontendutveckling. Nu utforskar jag kodning och webbdesign och lär mig ständigt nya saker.",
-  "educationList": [
-    "2025/11/17 - 2026/02/06 LIA: Lärande i arbete 1 (Praktik - Frontendutvecklare) Satit Bilingual School of Rangsit University, Bangkok, Thailand",
-    "2024 - FrontEnd Developer : NBI Handelsakademin Göteborg",
-    "2024 - Svenska som andraspråk 2 : Hermods Göteborg",
-    "2024 - Programmering 1 : Handelsakademin Göteborg",
-    "2024 - Programmering 1 : Hermods Göteborg",
-    "2022 - Förskoleassistent / Barnskötarutbildning : Komvux i Alafors, Ale kommun",
-    "2021 - Svenska som andraspråk 1 : Hermods Göteborg",
-    "2021 - Arbetsliv för pedagoger : Hermods Göteborg",
-    "2019 - Talang Barnomsorg / Barnskötare : Hermods Göteborg",
-    "2018 - Svenska för invandrare (SFI) : Hermods Göteborg",
-    "2006 - Filosofie kandidatexamen (BA) Engelska språket och litteraturen : Naresuan University Thailand",
-    "2000 - Företagsdator - Högre yrkesutbildning : Northeastern Technological College Thailand"
-  ],
-  "workList": [
-    "2025-2026 : Praktik - Frontendutvecklare - Satit Bilingual School of Rangsit University, Bangkok, Thailand",
-    "2021-2023 : Barnskötare / Förskoleassistent - Ale Kommun",
-    "2019-2021 : Barnskötare / Förskoleassistent - Göteborg Stad",
-    "2019-2020 : Städare - Radisson Blu Hotel, Göteborg Stad",
-    "2019 : Praktik som barnskötare - Skånegatan förskola, Göteborg Stad",
-    "2010-2017 : Volontär som lärarassistent - Thailand",
-    "2015 : Administratör - Headstart International School, Phuket, Thailand",
-    "2013-2015 : Thailärare för invandrare - The Genius Language School, Phuket, Thailand",
-    "2014-2015 : Djurskötare för hundar - Phuket Dogs Resort, Phuket, Thailand",
-    "2013 : Kassörska & Servitris - Kata Cuit restaurang, Phuket, Thailand",
-    "2011-2012 : Lärarassistent (Engelska programmet) - Anuban Khonkaen School, Khonkaen, Thailand",
-    "2010-2011 : Lärarassistent - Paiboon Wittaya School, Khonkaen, Thailand",
-    "2010 : Smart English-lärare för barn, Khonkaen, Thailand",
-    "2009 : Turistguide (Praktik) - Kanchanaburi, Thailand",
-    "2006-2009 : Säljare - Payao, Thailand",
-    "2004-2005 : Kassörska & Servitris - Kiwi Café, Khonkaen, Thailand"
-  ],
-  "skillsList": [
-    "Webbutveckling: HTML, CSS, JavaScript, React.js, TypeScript, Firebase, Firestore, GitHub, Testning, Agile, Scrum",
-    "Design: UX/UI, Figma, Pixlr, Canva",
-    "Språk: Thailändska, Engelska, Svenska",
-    "Undervisning & Barnomsorg: 10+ år som lärarassistent"
-  ],
-  "lifestyleContent": "Utanför arbetet tycker jag om att fotografera, rita, pyssla, virka, resa och utforska nya tekniska verktyg.",
-  "hobby1": "Fotografering",
-  "hobby2": "Teckning",
-  "hobby3": "Hantverk & Virkning",
-  "hobby4": "Resor & Utforska teknik",
-  "contactText": "Se mitt CV"
+  "nav": {
+    "home": "Hem",
+    "projects": "Projekt",
+    "whatido": "Vad jag gör",
+    "gallery": "Galleri",
+    "contact": "Kontakt"
+  },
+  "home": {
+    "heroWords": ["Från", "Idé", "Till", "Webbplats"],
+    "logoAlt": "Photsathon logotyp",
+    "intro": "Hej, jag heter",
+    "name": "Photsathon Karlsson",
+    "role": "⭐ Frontendutvecklare ⭐",
+    "descriptionLine1": "Jag bygger webbplatser med kod.",
+    "descriptionLine2": "Jag skapar upplevelser med omtanke.",
+    "viewCV": "Se CV",
+    "aboutMe": "Om mig",
+    "aboutLine1": "Från Thailand till Sverige. Från förskola till programmering.",
+    "aboutLine2": "Min resa har lärt mig att bra upplevelser—för både barn och användare—börjar med att förstå människor. Nu omvandlar jag idéer till rena, moderna webbplatser."
+  },
+  "projectsPage": {
+    "titleMy": "Mina ",
+    "titleProjects": "Projekt",
+    "subtitle": "Från koncept till webbplats. ♡",
+    "viewProject": "Se projekt →",
+    "filters": {
+      "all": "Alla projekt",
+      "uiux": "UI/UX",
+      "javascript": "JavaScript",
+      "htmlcss": "HTML/CSS",
+      "testing": "Testning",
+      "agile": "Agilt",
+      "typescript": "TypeScript",
+      "website": "Webbplats"
+    },
+    "items": {
+      "firststep": {
+        "title": "FirstStep",
+        "description": "En webbapp som hjälper skolor att hantera introduktion av elever på ett ställe. Testa - ✉️: admin@test.com 🔑: 12345678"
+      },
+      "chappy": {
+        "title": "Chappy Chat App",
+        "description": "En enkel realtidschatt där användare kan skicka och ta emot meddelanden online."
+      },
+      "sunnyplay": {
+        "title": "SunnyPlay Webshop",
+        "description": "En webbshop för leksaker med produkter, kundvagn och adminfunktioner."
+      },
+      "cyberpetz": {
+        "title": "Cyber Petz",
+        "description": "Ett modernt UI/UX-koncept för ett smart djurvarumärke med shopping- och checkout-flöden."
+      },
+      "betterweb": {
+        "title": "Better Web",
+        "description": "En konferenswebbplats med information, schema och onlineanmälan."
+      },
+      "hangman": {
+        "title": "Hangman Game",
+        "description": "Ett klassiskt ordgissningsspel med interaktivt spel och poängräkning."
+      },
+      "productcompany": {
+        "title": "Product Company Website",
+        "description": "En responsiv företagswebbplats med produkter, företagsinformation och kontakt."
+      },
+      "chili": {
+        "title": "Chili Restaurant App",
+        "description": "En restaurangapp för meny, beställningar och bokningar."
+      },
+      "foodtruck": {
+        "title": "Foodtruck App",
+        "description": "En matbeställningsapp med digital meny, kundvagn och checkout."
+      },
+      "travel": {
+        "title": "Travel App",
+        "description": "En reseapp designad för att göra kollektivtrafik enklare och mer användarvänlig."
+      },
+      "bookit": {
+        "title": "Book It",
+        "description": "En app för rumsbokning designad med fokus på användarupplevelse."
+      },
+      "testingtdd": {
+        "title": "Testing TDD",
+        "description": "Ett testprojekt med enhetstester för bättre kodkvalitet och tillförlitlighet."
+      },
+      "testinge2e": {
+        "title": "Testing E2E",
+        "description": "Ett end-to-end-testprojekt som kontrollerar användarflöden i en webbapplikation."
+      }
+    }
+  },
+  "whatidoPage": {
+    "title": "Vad jag gör",
+    "subtitle": "Jag kombinerar teknik, kreativitet och kommunikation för att skapa användbara digitala upplevelser och lösa vardagliga problem. ♡",
+    "helpTitle": "Hur jag kan hjälpa",
+    "skillsTitle": "Kompetenser",
+    "educationTitle": "Utbildning",
+    "workTitle": "Arbetslivserfarenhet",
+    "ctaTitle": "♡ Låt oss skapa tillsammans",
+    "ctaText": "Varje bra idé börjar med ett enkelt samtal.",
+    "ctaButton": "Säg hej 👋",
+    "services": {
+      "frontend": {
+        "title": "Frontendutveckling",
+        "description": "Jag bygger responsiva webbplatser med ren kod och användarvänlig struktur.",
+        "items": ["React", "HTML, CSS, JavaScript", "TypeScript"]
+      },
+      "webdesign": {
+        "title": "Webbdesign",
+        "description": "Jag designar enkla och moderna webbplatser som är tydliga, användbara och lätta att använda.",
+        "items": ["Responsiv design", "Webbstruktur", "Visuell design"]
+      },
+      "uiux": {
+        "title": "UI/UX-design",
+        "description": "Jag skapar digitala upplevelser med fokus på människor, tillgänglighet och bra flöde.",
+        "items": ["Figma", "WCAG", "Användarvänlig design"]
+      },
+      "itsupport": {
+        "title": "IT-support",
+        "description": "Jag kan hjälpa till med digitala verktyg, enkel felsökning och teknisk support.",
+        "items": ["Helpdesk", "Felsökning", "Digitala verktyg"]
+      },
+      "preschool": {
+        "title": "Förskoleassistent",
+        "description": "Jag har erfarenhet av att stödja barn, lärare, lärande och dagliga rutiner.",
+        "items": ["Lärandestöd", "Kommunikation", "Teamarbete"]
+      },
+      "admin": {
+        "title": "Administratör",
+        "description": "Jag har erfarenhet av dokumentation, organisering och kundkommunikation.",
+        "items": ["Dokumentation", "Organisering", "Kundservice"]
+      }
+    },
+    "skills": {
+      "frontend": {
+        "title": "Frontendutveckling",
+        "text": "React, HTML, CSS, JavaScript, TypeScript"
+      },
+      "itsupport": {
+        "title": "IT-support",
+        "text": "Helpdesk, Felsökning, Digitala verktyg"
+      },
+      "uiux": {
+        "title": "UX/UI-design",
+        "text": "Figma, Responsiv design, WCAG"
+      },
+      "customer": {
+        "title": "Kundservice",
+        "text": "Kommunikation, Problemlösning"
+      },
+      "admin": {
+        "title": "Administration",
+        "text": "Dokumentation, Organisering"
+      },
+      "education": {
+        "title": "Utbildning",
+        "text": "Undervisning, Lärandestöd"
+      }
+    },
+    "educationList": [
+      "2024 – 2026 | Frontendutveckling — NBI Handelsakademin, Göteborg, Sverige",
+      "2024 | Programmering 1 HTML/CSS — Handelsakademin, Sverige",
+      "2024 | Programmering 1 C# — Hermods, Sverige",
+      "2024 | Svenska som andraspråk 2 — Hermods, Sverige",
+      "2022 | Förskoleassistent / Barnskötarutbildning — Komvux Alafors, Sverige",
+      "2006 | Kandidatexamen i engelska språket och litteraturen — Naresuan University, Thailand",
+      "2000 | Företagsekonomi och datorprogram — Northeastern Technological College, Thailand"
+    ],
+    "workList": [
+      "2025 – 2026 | Frontendutvecklare praktikant — Satit Bilingual School of Rangsit University, Thailand",
+      "2025 | Service Worker / Lokalvårdare — Kungälvs Sjukhus, Sverige",
+      "2021 – 2023 | Förskoleassistent — Ale Kommun, Sverige",
+      "2019 – 2021 | Förskoleassistent — Göteborg Stad, Sverige",
+      "2019 – 2020 | Housekeeper — Radisson Blu Scandinavia Hotel, Sverige",
+      "2019 | Praktik som förskoleassistent — Skånegatans Förskola, Sverige",
+      "2015 | Administratör — HeadStart International School, Phuket, Thailand",
+      "2013 – 2015 | Thailärare — The Genius Language School, Phuket, Thailand",
+      "2011 – 2012 | Lärarassistent — Anuban Khonkaen School, Thailand",
+      "2010 – 2011 | Engelsklärare — Paiboon Wittaya School, Thailand",
+      "2010 | Engelsklärare — Smart English for Kids, Thailand"
+    ]
+  },
+  "galleryPage": {
+    "title": "Galleri",
+    "subtitle": "En samling av mitt arbete, mina studier, min kreativitet, mina hobbyer och platser som har format mig. ♡",
+    "momentsTitle": "Stunder & Minnen",
+    "workMoments": "Arbetsstunder",
+    "schoolEducation": "Skola & Utbildning",
+    "hobbies": "Hobbyer",
+    "placesTitle": "Platser jag har varit på",
+    "milestonesTitle": "Milstolpar",
+    "ctaTitle": "♡ Gillar du det du ser?",
+    "ctaText": "Låt oss göra minnen, idéer och berättelser till något meningsfullt.",
+    "ctaButton": "Säg hej 👋",
+    "ariaPrevious": "Föregående bild i",
+    "ariaNext": "Nästa bild i",
+    "work": {
+      "headstart": "Head Start International School, Phuket Thailand",
+      "genius": "The Genius Language School, Phuket Thailand",
+      "anuban": "Anuban Khonkaen, Khonkaen Thailand",
+      "dogresort": "Phuket Dog Resort, Phuket Thailand"
+    },
+    "school": {
+      "nbi": "Frontendutveckling : NBI-Handelsakademin, Göteborg Sverige",
+      "sbs": "Frontendutveckling : Praktik - SBS Thailand",
+      "sfi": "Svenska för invandrare (SFI), Göteborg Sverige",
+      "talang": "SFI-TalangBarnomsorg, Göteborg Sverige",
+      "naresuan": "Kandidatexamen i engelska språket och litteraturen : Naresuan University Thailand",
+      "sprakcafe": "Språkcafé, Götaplatsen, Göteborg Sverige"
+    },
+    "hobby": {
+      "drawing": "Teckning",
+      "crafts": "Pyssel",
+      "crochet": "Virkning"
+    },
+    "places": {
+      "thailand": "Thailand",
+      "sweden": "Sverige",
+      "denmark": "Danmark",
+      "poland": "Polen",
+      "vietnam": "Vietnam"
+    },
+    "milestones": {
+      "thailand": {
+        "title": "Thailand",
+        "description": "Mina rötter, min tidiga utbildning och mina första arbetslivserfarenheter."
+      },
+      "degree": {
+        "title": "Engelsk examen",
+        "description": "Studerade engelska språket och litteraturen."
+      },
+      "teaching": {
+        "title": "Undervisning",
+        "description": "Arbetade som lärare och lärarassistent."
+      },
+      "sweden": {
+        "title": "Sverige",
+        "description": "Startade ett nytt kapitel med studier, arbete och vardagsliv."
+      },
+      "preschool": {
+        "title": "Förskolearbete",
+        "description": "Arbetade med barn, rutiner, kommunikation och teamarbete."
+      },
+      "frontend": {
+        "title": "Frontendutveckling",
+        "description": "Studerade webbutveckling och byggde digitala projekt."
+      },
+      "portfolio": {
+        "title": "Webbportfolio",
+        "description": "Skapar min egen plats för att visa projekt, kompetenser och min resa."
+      }
+    }
+  },
+  "contactPage": {
+    "titleLine1": "Låt oss skapa",
+    "titleLine2": "Något tillsammans",
+    "subtitleLine1": "Från idéer till webbplatser,",
+    "subtitleLine2": "låt oss skapa något enkelt,",
+    "subtitleLine3": "vackert och meningsfullt. ♡",
+    "imageAlt": "Photsathon vinkar medan hon arbetar vid en laptop",
+    "talkTitle": "Låt oss prata",
+    "talkLine1": "Oavsett om det är en webbplats,",
+    "talkLine2": "ett samarbete,",
+    "talkLine3": "eller en fråga,",
+    "talkLine4": "hjälper jag gärna till.",
+    "nameLabel": "Ditt namn",
+    "namePlaceholder": "Vad ska jag kalla dig?",
+    "emailLabel": "E-postadress",
+    "emailPlaceholder": "din@email.com",
+    "subjectLabel": "Ämne",
+    "subjectPlaceholder": "Vad handlar det om?",
+    "messageLabel": "Ditt meddelande",
+    "messagePlaceholder": "Berätta lite om ditt projekt, din idé eller något du vill dela...",
+    "sendButton": "Skicka meddelande",
+    "defaultStatus": "Jag svarar snart! ♡",
+    "sendingStatus": "Skickar...",
+    "successStatus": "Meddelandet skickades! ♡",
+    "errorStatus": "Försök igen eller kontakta mig på Instagram.",
+    "defaultSubject": "Nytt meddelande från photsathon.com",
+    "onlineTitle": "Hitta mig online",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "instagram": "Instagram",
+    "connectTitle": "Låt oss skapa något fint",
+    "connectLine1": "Jag är alltid öppen för",
+    "connectLine2": "nya möjligheter,",
+    "connectLine3": "kreativa samarbeten,",
+    "connectLine4": "och vänliga samtal.",
+    "bottomText": "Tack för att du tittade förbi! ♡",
+    "bottomBye": "Vi ses snart! 👋"
+  }
 }

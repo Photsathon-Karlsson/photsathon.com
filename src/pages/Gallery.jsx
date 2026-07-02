@@ -4,13 +4,13 @@ import '../index.css';
 const img = (fileName) => `${import.meta.env.BASE_URL}img/${fileName}`;
 
 const colors = [
-  '#b00000',
-  '#9a6700',
-  '#1d4ed8',
-  '#1f7a3f',
-  '#6d4aa2',
-  '#be123c',
-  '#f59e0b',
+  '#FF0080',
+  '#FF5580',
+  '#4300FF',
+  '#00CAFF',
+  '#00FFDE',
+  '#FCB53B',
+  '#CF0A0A',
 ];
 
 const GalleryCarousel = ({ gallery }) => {
@@ -167,7 +167,8 @@ const Gallery = () => {
       ],
     },
     {
-      title: 'Bachelor of Arts (BA) English Language and Literature : Naresuan University Thailand',
+      title:
+        'Bachelor of Arts (BA) English Language and Literature : Naresuan University Thailand',
       images: [
         img('Gallery-NaresuanUniversity1.jpg'),
         img('Gallery-NaresuanUniversity3.jpg'),
@@ -308,10 +309,10 @@ const Gallery = () => {
       </section>
 
       <section className="life-section">
-        <h2>Moments & Memories</h2>
+        <h2>{hoverText('Moments & Memories')}</h2>
 
         <div className="gallery-subsection">
-          <h3>Work Moments</h3>
+          <h3>{hoverText('Work Moments')}</h3>
           <div className="gallery-carousel-grid">
             {workMoments.map((gallery) => (
               <GalleryCarousel gallery={gallery} key={gallery.title} />
@@ -320,7 +321,7 @@ const Gallery = () => {
         </div>
 
         <div className="gallery-subsection">
-          <h3>School & Education</h3>
+          <h3>{hoverText('School & Education')}</h3>
           <div className="gallery-carousel-grid">
             {schoolEducation.map((gallery) => (
               <GalleryCarousel gallery={gallery} key={gallery.title} />
@@ -329,7 +330,7 @@ const Gallery = () => {
         </div>
 
         <div className="gallery-subsection">
-          <h3>Hobbies</h3>
+          <h3>{hoverText('Hobbies')}</h3>
           <div className="gallery-carousel-grid">
             {hobbies.map((gallery) => (
               <GalleryCarousel gallery={gallery} key={gallery.title} />
@@ -339,7 +340,7 @@ const Gallery = () => {
       </section>
 
       <section className="life-section">
-        <h2>Places I’ve Been</h2>
+        <h2>{hoverText('Places I’ve Been')}</h2>
 
         <div className="gallery-carousel-grid">
           {places.map((gallery) => (
@@ -349,7 +350,7 @@ const Gallery = () => {
       </section>
 
       <section className="life-section">
-        <h2>Milestones</h2>
+        <h2>{hoverText('Milestones')}</h2>
 
         <div className="life-timeline">
           {milestones.map((item) => (

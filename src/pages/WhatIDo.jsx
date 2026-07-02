@@ -2,14 +2,16 @@ import React from 'react';
 import '../index.css';
 
 const colors = [
-  '#b00000',
-  '#9a6700',
-  '#1d4ed8',
-  '#1f7a3f',
-  '#6d4aa2',
-  '#be123c',
-  '#f59e0b',
+  '#FF0080',
+  '#FF5580',
+  '#4300FF',
+  '#00CAFF',
+  '#00FFDE',
+  '#FCB53B',
+  '#CF0A0A',
 ];
+
+const img = (fileName) => `${import.meta.env.BASE_URL}img/${fileName}`;
 
 const WhatIDo = () => {
   const hoverText = (text) =>
@@ -25,42 +27,42 @@ const WhatIDo = () => {
 
   const services = [
     {
-      icon: '💻',
+      icon: img('logo - what i do - Frontend Development.png'),
       title: 'Frontend Development',
       description:
         'I build responsive websites with clean code and user-friendly structure.',
       items: ['React', 'HTML, CSS, JavaScript', 'TypeScript'],
     },
     {
-      icon: '🖥️',
+      icon: img('logo - what i do - Web Design.png'),
       title: 'Web Design',
       description:
         'I design simple, modern websites that are clear, useful, and easy to use.',
       items: ['Responsive Design', 'Website Structure', 'Visual Design'],
     },
     {
-      icon: '🎨',
+      icon: img('logo - what i do - UIUX Design.png'),
       title: 'UI/UX Design',
       description:
         'I create digital experiences that focus on people, accessibility, and good flow.',
       items: ['Figma', 'WCAG', 'User-friendly Design'],
     },
     {
-      icon: '🛠️',
+      icon: img('logo - what i do - IT Support.png'),
       title: 'IT Support',
       description:
         'I can help with digital tools, basic troubleshooting, and technical support.',
       items: ['Helpdesk', 'Troubleshooting', 'Digital Tools'],
     },
     {
-      icon: '👩‍🏫',
+      icon: img('logo - what i do - Preschool Assistant.png'),
       title: 'Preschool Assistant',
       description:
         'I have experience supporting children, teachers, learning, and daily routines.',
       items: ['Learning Support', 'Communication', 'Teamwork'],
     },
     {
-      icon: '📋',
+      icon: img('logo - what i do - Admin.png'),
       title: 'Administrator',
       description:
         'I have experience with documentation, organization, and customer communication.',
@@ -69,37 +71,37 @@ const WhatIDo = () => {
   ];
 
   const skills = [
-    {
-      icon: '💻',
-      title: 'Frontend Development',
-      text: 'React, HTML, CSS, JavaScript, TypeScript',
-    },
-    {
-      icon: '🎧',
-      title: 'IT Support',
-      text: 'Helpdesk, Troubleshooting, Digital Tools',
-    },
-    {
-      icon: '🎨',
-      title: 'UX/UI Design',
-      text: 'Figma, Responsive Design, WCAG',
-    },
-    {
-      icon: '💬',
-      title: 'Customer Service',
-      text: 'Communication, Problem Solving',
-    },
-    {
-      icon: '📋',
-      title: 'Administration',
-      text: 'Documentation, Organization',
-    },
-    {
-      icon: '👩‍🏫',
-      title: 'Education',
-      text: 'Teaching, Learning Support',
-    },
-  ];
+  {
+    icon: img('logo - what i do - Frontend Development 2.png'),
+    title: 'Frontend Development',
+    text: 'React, HTML, CSS, JavaScript, TypeScript',
+  },
+  {
+    icon: img('logo - what i do - IT Support 2.png'),
+    title: 'IT Support',
+    text: 'Helpdesk, Troubleshooting, Digital Tools',
+  },
+  {
+    icon: img('logo - what i do - UIUX Design 2.png'),
+    title: 'UX/UI Design',
+    text: 'Figma, Responsive Design, WCAG',
+  },
+  {
+    icon: img('logo - what i do - Customer Service.png'),
+    title: 'Customer Service',
+    text: 'Communication, Problem Solving',
+  },
+  {
+    icon: img('logo - what i do - Admin 2.png'),
+    title: 'Administration',
+    text: 'Documentation, Organization',
+  },
+  {
+    icon: img('logo - what i do - Education.png'),
+    title: 'Education',
+    text: 'Teaching, Learning Support',
+  },
+];
 
   const education = [
     '2024 – 2026 | Frontend Development — NBI Handelsakademin, Gothenburg, Sweden',
@@ -144,7 +146,14 @@ const WhatIDo = () => {
         <div className="service-grid">
           {services.map((service) => (
             <article className="service-card" key={service.title}>
-              <div className="service-icon">{service.icon}</div>
+              <div className="service-icon">
+                <img
+                  src={service.icon}
+                  alt={service.title}
+                  className="service-icon-img"
+                />
+              </div>
+
               <h3>{service.title}</h3>
               <p>{service.description}</p>
 
@@ -164,7 +173,13 @@ const WhatIDo = () => {
         <div className="skills-strip">
           {skills.map((skill) => (
             <article className="skill-mini-card" key={skill.title}>
-              <div className="skill-mini-icon">{skill.icon}</div>
+              <div className="skill-mini-icon">
+                <img
+                  src={skill.icon}
+                  alt={skill.title}
+                  className="skill-mini-icon-img"
+                />
+              </div>
               <h3>{skill.title}</h3>
               <p>{skill.text}</p>
             </article>

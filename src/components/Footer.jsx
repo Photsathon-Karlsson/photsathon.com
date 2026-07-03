@@ -4,7 +4,7 @@ import '../index.css';
 const Footer = () => {
   return (
     <footer className="footer">
-      <p>© 2025 Photsathon.com. All Rights Reserved.</p>
+      <p>© photsathon.com ⭐ All Rights Reserved.</p>
     </footer>
   );
 };

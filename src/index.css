@@ -1584,8 +1584,8 @@ body.dark-mode .color-8 {
 }
 
 .skill-mini-icon-img {
-  width: 160px;
-  height: 160px;
+  width: 500px;
+  height: 100px;
   object-fit: contain;
   display: block;
   margin: 0 auto;

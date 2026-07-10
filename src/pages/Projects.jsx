@@ -57,7 +57,7 @@ const Projects = () => {
       title: t('projectsPage.items.firststep.title'),
       categories: ['Website', 'JavaScript'],
       description: t('projectsPage.items.firststep.description'),
-      image: `${import.meta.env.BASE_URL}img/Project-FirstStep.jpg`,
+      image: `${import.meta.env.BASE_URL}dist/img/Project-FirstStep.jpg`,
       link: 'https://firststep-n9zi.onrender.com/',
     },
     {
@@ -65,7 +65,7 @@ const Projects = () => {
       title: t('projectsPage.items.chappy.title'),
       categories: ['Website', 'TypeScript'],
       description: t('projectsPage.items.chappy.description'),
-      image: `${import.meta.env.BASE_URL}img/Project-ChappyChatApp.jpg`,
+      image: `${import.meta.env.BASE_URL}dist/img/Project-ChappyChatApp.jpg`,
       link: 'https://chappy-chat-app-fullstack.onrender.com/',
     },
     {
@@ -73,7 +73,7 @@ const Projects = () => {
       title: t('projectsPage.items.sunnyplay.title'),
       categories: ['Website', 'JavaScript'],
       description: t('projectsPage.items.sunnyplay.description'),
-      image: `${import.meta.env.BASE_URL}img/Project-WebShop.jpg`,
+      image: `${import.meta.env.BASE_URL}dist/img/Project-WebShop.jpg`,
       link: 'https://photsathon-karlsson.github.io/Webbshop_SunnyPlay/',
     },
     {
@@ -81,7 +81,7 @@ const Projects = () => {
       title: t('projectsPage.items.cyberpetz.title'),
       categories: ['UI/UX'],
       description: t('projectsPage.items.cyberpetz.description'),
-      image: `${import.meta.env.BASE_URL}img/Project-CyberPetz.jpg`,
+      image: `${import.meta.env.BASE_URL}dist/img/Project-CyberPetz.jpg`,
       link: 'https://www.figma.com/proto/h0AOGTG7yqtktfOJev90dt/Inl%C3%A4mningsuppgift-UX---Cyber-Petz?node-id=104-4359&p=f&t=T68YKmFeXj59pKrs-1&scaling=scale-down&content-scaling=fixed&page-id=1%3A167&starting-point-node-id=104%3A4359',
     },
     {
@@ -89,7 +89,7 @@ const Projects = () => {
       title: t('projectsPage.items.betterweb.title'),
       categories: ['HTML/CSS'],
       description: t('projectsPage.items.betterweb.description'),
-      image: `${import.meta.env.BASE_URL}img/Project-BetterWeb.jpg`,
+      image: `${import.meta.env.BASE_URL}dist/img/Project-BetterWeb.jpg`,
       link: 'https://photsathon-karlsson.github.io/Better-web/',
     },
     {
@@ -97,7 +97,7 @@ const Projects = () => {
       title: t('projectsPage.items.hangman.title'),
       categories: ['JavaScript'],
       description: t('projectsPage.items.hangman.description'),
-      image: `${import.meta.env.BASE_URL}img/Project-HangmanGame.jpg`,
+      image: `${import.meta.env.BASE_URL}dist/img/Project-HangmanGame.jpg`,
       link: 'https://ritahelwangi.github.io/Hangman/',
     },
     {
@@ -105,7 +105,7 @@ const Projects = () => {
       title: t('projectsPage.items.productcompany.title'),
       categories: ['HTML/CSS'],
       description: t('projectsPage.items.productcompany.description'),
-      image: `${import.meta.env.BASE_URL}img/Project-Produktbolag.jpg`,
+      image: `${import.meta.env.BASE_URL}dist/img/Project-Produktbolag.jpg`,
       link: 'https://felix-skorvald.github.io/majestic-rabbits/index.html',
     },
     {
@@ -113,7 +113,7 @@ const Projects = () => {
       title: t('projectsPage.items.chili.title'),
       categories: ['JavaScript', 'Agile'],
       description: t('projectsPage.items.chili.description'),
-      image: `${import.meta.env.BASE_URL}img/Project-Chili.jpg`,
+      image: `${import.meta.env.BASE_URL}dist/img/Project-Chili.jpg`,
       link: 'https://ritahelwangi.github.io/chili',
     },
     {
@@ -121,7 +121,7 @@ const Projects = () => {
       title: t('projectsPage.items.foodtruck.title'),
       categories: ['JavaScript'],
       description: t('projectsPage.items.foodtruck.description'),
-      image: `${import.meta.env.BASE_URL}img/Project-Foodtruck.jpg`,
+      image: `${import.meta.env.BASE_URL}dist/img/Project-Foodtruck.jpg`,
       link: 'https://photsathon-karlsson.github.io/Foodtruck/',
     },
     {
@@ -129,7 +129,7 @@ const Projects = () => {
       title: t('projectsPage.items.travel.title'),
       categories: ['UI/UX', 'Agile'],
       description: t('projectsPage.items.travel.description'),
-      image: `${import.meta.env.BASE_URL}img/Project-TravelApp.jpg`,
+      image: `${import.meta.env.BASE_URL}dist/img/Project-TravelApp.jpg`,
       link: 'https://www.figma.com/design/N1IuVPjwyX29Di64YNI51L/Ninja-Kittens?node-id=28-146&t=Ykz87mX05D4vPpva-1',
     },
     {
@@ -137,7 +137,7 @@ const Projects = () => {
       title: t('projectsPage.items.bookit.title'),
       categories: ['UI/UX', 'Agile'],
       description: t('projectsPage.items.bookit.description'),
-      image: `${import.meta.env.BASE_URL}img/Project-MeetingApp.jpg`,
+      image: `${import.meta.env.BASE_URL}dist/img/Project-MeetingApp.jpg`,
       link: 'https://www.figma.com/design/809dcjkY3JO4tWzC2AN2ve/Grupparbete-agil-UX?node-id=0-1&t=ZGoTdLfzN49FkR98-1',
     },
     {
@@ -145,7 +145,7 @@ const Projects = () => {
       title: t('projectsPage.items.testingtdd.title'),
       categories: ['Testing', 'JavaScript'],
       description: t('projectsPage.items.testingtdd.description'),
-      image: `${import.meta.env.BASE_URL}img/Project-Testing TDD.jpg`,
+      image: `${import.meta.env.BASE_URL}dist/img/Project-Testing TDD.jpg`,
       link: 'https://github.com/Photsathon-Karlsson/exam-unit-test',
     },
     {
@@ -153,7 +153,7 @@ const Projects = () => {
       title: t('projectsPage.items.testinge2e.title'),
       categories: ['Testing'],
       description: t('projectsPage.items.testinge2e.description'),
-      image: `${import.meta.env.BASE_URL}img/Project-testing E2E.jpg`,
+      image: `${import.meta.env.BASE_URL}dist/img/Project-testing E2E.jpg`,
       link: 'https://github.com/Photsathon-Karlsson/ReadListE2E',
     },
   ];

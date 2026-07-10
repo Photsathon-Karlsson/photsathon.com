@@ -12,8 +12,6 @@ const colors = [
   '#CF0A0A',
 ];
 
-const img = (fileName) => `${import.meta.env.BASE_URL}img/${fileName}`;
-
 const WhatIDo = () => {
   const { t } = useTranslation();
 
@@ -30,78 +28,95 @@ const WhatIDo = () => {
 
   const services = [
     {
-      icon: img('logo - what i do - Frontend Development.png'),
+      icon: `${import.meta.env.BASE_URL}dist/img/logo - what i do - Frontend Development.png`, 
       title: t('whatidoPage.services.frontend.title'),
       description: t('whatidoPage.services.frontend.description'),
-      items: t('whatidoPage.services.frontend.items', { returnObjects: true }),
+      items: t('whatidoPage.services.frontend.items', {
+        returnObjects: true,
+      }),
     },
     {
-      icon: img('logo - what i do - Web Design.png'),
+      icon: `${import.meta.env.BASE_URL}dist/img/logo - what i do - Web Design.png`,
       title: t('whatidoPage.services.webdesign.title'),
       description: t('whatidoPage.services.webdesign.description'),
-      items: t('whatidoPage.services.webdesign.items', { returnObjects: true }),
+      items: t('whatidoPage.services.webdesign.items', {
+        returnObjects: true,
+      }),
     },
     {
-      icon: img('logo - what i do - UIUX Design.png'),
+      icon: `${import.meta.env.BASE_URL}dist/img/logo - what i do - UIUX Design.png`,
       title: t('whatidoPage.services.uiux.title'),
       description: t('whatidoPage.services.uiux.description'),
-      items: t('whatidoPage.services.uiux.items', { returnObjects: true }),
+      items: t('whatidoPage.services.uiux.items', {
+        returnObjects: true,
+      }),
     },
     {
-      icon: img('logo - what i do - IT Support.png'),
+      icon: `${import.meta.env.BASE_URL}dist/img/logo - what i do - IT Support.png`,
       title: t('whatidoPage.services.itsupport.title'),
       description: t('whatidoPage.services.itsupport.description'),
-      items: t('whatidoPage.services.itsupport.items', { returnObjects: true }),
+      items: t('whatidoPage.services.itsupport.items', {
+        returnObjects: true,
+      }),
     },
     {
-      icon: img('logo - what i do - Preschool Assistant.png'),
+      icon: `${import.meta.env.BASE_URL}dist/img/logo - what i do - Preschool Assistant.png`,
       title: t('whatidoPage.services.preschool.title'),
       description: t('whatidoPage.services.preschool.description'),
-      items: t('whatidoPage.services.preschool.items', { returnObjects: true }),
+      items: t('whatidoPage.services.preschool.items', {
+        returnObjects: true,
+      }),
     },
     {
-      icon: img('logo - what i do - Admin.png'),
+      icon: `${import.meta.env.BASE_URL}dist/img/logo - what i do - Admin.png`,
       title: t('whatidoPage.services.admin.title'),
       description: t('whatidoPage.services.admin.description'),
-      items: t('whatidoPage.services.admin.items', { returnObjects: true }),
+      items: t('whatidoPage.services.admin.items', {
+        returnObjects: true,
+      }),
     },
   ];
 
   const skills = [
     {
-      icon: img('logo - what i do - Frontend Development 2.png'),
+      icon: `${import.meta.env.BASE_URL}dist/img/logo - what i do - Frontend Development 2.png`,
       title: t('whatidoPage.skills.frontend.title'),
       text: t('whatidoPage.skills.frontend.text'),
     },
     {
-      icon: img('logo - what i do - IT Support 2.png'),
+      icon: `${import.meta.env.BASE_URL}dist/img/logo - what i do - IT Support 2.png`,
       title: t('whatidoPage.skills.itsupport.title'),
       text: t('whatidoPage.skills.itsupport.text'),
     },
     {
-      icon: img('logo - what i do - UIUX Design 2.png'),
+      icon: `${import.meta.env.BASE_URL}dist/img/logo - what i do - UIUX Design 2.png`,
       title: t('whatidoPage.skills.uiux.title'),
       text: t('whatidoPage.skills.uiux.text'),
     },
     {
-      icon: img('logo - what i do - Customer Service.png'),
+      icon: `${import.meta.env.BASE_URL}dist/img/logo - what i do - Customer Service.png`,
       title: t('whatidoPage.skills.customer.title'),
       text: t('whatidoPage.skills.customer.text'),
     },
     {
-      icon: img('logo - what i do - Admin 2.png'),
+      icon: `${import.meta.env.BASE_URL}dist/img/logo - what i do - Admin 2.png`,
       title: t('whatidoPage.skills.admin.title'),
       text: t('whatidoPage.skills.admin.text'),
     },
     {
-      icon: img('logo - what i do - Education.png'),
+      icon: `${import.meta.env.BASE_URL}dist/img/logo - what i do - Education.png`,
       title: t('whatidoPage.skills.education.title'),
       text: t('whatidoPage.skills.education.text'),
     },
   ];
 
-  const education = t('whatidoPage.educationList', { returnObjects: true });
-  const work = t('whatidoPage.workList', { returnObjects: true });
+  const education = t('whatidoPage.educationList', {
+    returnObjects: true,
+  });
+
+  const work = t('whatidoPage.workList', {
+    returnObjects: true,
+  });
 
   return (
     <main className="what-page" id="whatido">
@@ -130,9 +145,10 @@ const WhatIDo = () => {
               <p>{service.description}</p>
 
               <ul>
-                {service.items.map((item) => (
-                  <li key={item}>✓ {item}</li>
-                ))}
+                {Array.isArray(service.items) &&
+                  service.items.map((item) => (
+                    <li key={item}>✓ {item}</li>
+                  ))}
               </ul>
             </article>
           ))}
@@ -152,6 +168,7 @@ const WhatIDo = () => {
                   className="skill-mini-icon-img"
                 />
               </div>
+
               <h3>{skill.title}</h3>
               <p>{skill.text}</p>
             </article>
@@ -164,11 +181,12 @@ const WhatIDo = () => {
           <h2>{hoverText(t('whatidoPage.educationTitle'))}</h2>
 
           <div className="info-list">
-            {education.map((item) => (
-              <div className="info-card" key={item}>
-                {item}
-              </div>
-            ))}
+            {Array.isArray(education) &&
+              education.map((item) => (
+                <div className="info-card" key={item}>
+                  {item}
+                </div>
+              ))}
           </div>
         </div>
 
@@ -176,11 +194,12 @@ const WhatIDo = () => {
           <h2>{hoverText(t('whatidoPage.workTitle'))}</h2>
 
           <div className="info-list">
-            {work.map((item) => (
-              <div className="info-card" key={item}>
-                {item}
-              </div>
-            ))}
+            {Array.isArray(work) &&
+              work.map((item) => (
+                <div className="info-card" key={item}>
+                  {item}
+                </div>
+              ))}
           </div>
         </div>
       </section>

@@ -242,13 +242,13 @@ const Home = () => {
           <div className="home-logo-group">
             <img
               className="home-floating-logo logo-main"
-              src={`${import.meta.env.BASE_URL}img/logo - home.png`}
+              src={`${import.meta.env.BASE_URL}dist/img/logo - home.png`}
               alt={t('home.logoAlt')}
             />
 
             <img
               className="logo-side-item"
-              src={`${import.meta.env.BASE_URL}img/logo - home2.png`}
+              src={`${import.meta.env.BASE_URL}dist/img/logo - home2.png`}
               alt=""
               aria-hidden="true"
             />

@@ -508,14 +508,15 @@ body.dark-mode .home-big-text h1 {
   object-fit: contain;
 
   background: transparent;
-  border: 6px solid #3b44f6;
+  border: 6px solid black;
+  border-radius: 20px;
   padding: 0;
 
   box-shadow: 0 18px 28px rgba(0, 0, 0, 0.16);
 
-  transform-style: preserve-3d;
+  /*transform-style: preserve-3d;
   animation: floatingLogo 3.5s ease-in-out infinite;
-  transition: transform 0.15s ease;
+  transition: transform 0.15s ease;*/
 }
 
 .home-page .logo-side-item {
@@ -2030,7 +2031,7 @@ body.dark .contact-page {
 }
 
 .contact-hero-image {
-  width: min(360px, 100%);
+  width: min(500px, 100%);
   height: auto;
 
   object-fit: contain;

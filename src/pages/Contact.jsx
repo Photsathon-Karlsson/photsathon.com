@@ -124,7 +124,7 @@ const Contact = () => {
           <div className="contact-hero-image-wrap">
             <img
               className="contact-hero-image"
-              src={`${import.meta.env.BASE_URL}img/contact-me.png`}
+              src={`${import.meta.env.BASE_URL}dist/img/contact-me.png`}
               alt={t('contactPage.imageAlt')}
             />
           </div>

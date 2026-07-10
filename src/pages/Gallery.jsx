@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import '../index.css';
 
-const img = (fileName) => `${import.meta.env.BASE_URL}img/${fileName}`;
+const img = (fileName) =>
+  `${import.meta.env.BASE_URL}dist/img/${fileName}`;
 
 const colors = [
   '#FF0080',
@@ -18,11 +19,15 @@ const GalleryCarousel = ({ gallery, t }) => {
   const [index, setIndex] = useState(0);
 
   const prevImage = () => {
-    setIndex((prev) => (prev === 0 ? gallery.images.length - 1 : prev - 1));
+    setIndex((prev) =>
+      prev === 0 ? gallery.images.length - 1 : prev - 1
+    );
   };
 
   const nextImage = () => {
-    setIndex((prev) => (prev === gallery.images.length - 1 ? 0 : prev + 1));
+    setIndex((prev) =>
+      prev === gallery.images.length - 1 ? 0 : prev + 1
+    );
   };
 
   return (
@@ -55,6 +60,7 @@ const GalleryCarousel = ({ gallery, t }) => {
 
       <div className="gallery-carousel-info">
         <h4>{gallery.title}</h4>
+
         <span>
           {index + 1} / {gallery.images.length}
         </span>
@@ -314,27 +320,42 @@ const Gallery = () => {
 
         <div className="gallery-subsection">
           <h3>{hoverText(t('galleryPage.workMoments'))}</h3>
+
           <div className="gallery-carousel-grid">
             {workMoments.map((gallery) => (
-              <GalleryCarousel gallery={gallery} key={gallery.title} t={t} />
+              <GalleryCarousel
+                gallery={gallery}
+                key={gallery.title}
+                t={t}
+              />
             ))}
           </div>
         </div>
 
         <div className="gallery-subsection">
           <h3>{hoverText(t('galleryPage.schoolEducation'))}</h3>
+
           <div className="gallery-carousel-grid">
             {schoolEducation.map((gallery) => (
-              <GalleryCarousel gallery={gallery} key={gallery.title} t={t} />
+              <GalleryCarousel
+                gallery={gallery}
+                key={gallery.title}
+                t={t}
+              />
             ))}
           </div>
         </div>
 
         <div className="gallery-subsection">
           <h3>{hoverText(t('galleryPage.hobbies'))}</h3>
+
           <div className="gallery-carousel-grid">
             {hobbies.map((gallery) => (
-              <GalleryCarousel gallery={gallery} key={gallery.title} t={t} />
+              <GalleryCarousel
+                gallery={gallery}
+                key={gallery.title}
+                t={t}
+              />
             ))}
           </div>
         </div>
@@ -345,7 +366,11 @@ const Gallery = () => {
 
         <div className="gallery-carousel-grid">
           {places.map((gallery) => (
-            <GalleryCarousel gallery={gallery} key={gallery.title} t={t} />
+            <GalleryCarousel
+              gallery={gallery}
+              key={gallery.title}
+              t={t}
+            />
           ))}
         </div>
       </section>
@@ -357,8 +382,13 @@ const Gallery = () => {
           {milestones.map((item) => (
             <div className="life-timeline-item" key={item.title}>
               <div className="life-timeline-dot" />
-              <div className="life-timeline-icon">{item.icon}</div>
+
+              <div className="life-timeline-icon">
+                {item.icon}
+              </div>
+
               <strong>{item.title}</strong>
+
               <p>{item.description}</p>
             </div>
           ))}
